@@ -1,0 +1,47 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button{
+  border: 0;
+  outline: 0;
+  min-width: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+input{
+  outline: 0;
+  height: 40px;
+  padding: 0.5rem;
+}
+a{
+  text-decoration: none;
+}
+.todo{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.fl{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  button{
+    width: 70px;
+  }
+}
+ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+header{
+  padding: 1rem;
+}
+header button{
+  width: 80px;
+}
