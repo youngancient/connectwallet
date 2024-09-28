@@ -48,7 +48,7 @@ const WalletConnect = () => {
           </div>
           <div className="result">
             <h4>Account: {trimString(inputAddress)}</h4>
-            <h3>Balance: {Number(balance).toFixed(2)}</h3>
+            <h3>Balance: {Number(balance).toFixed(6)}</h3>
           </div>
         </div>
       ) : (
