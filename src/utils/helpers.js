@@ -1,19 +1,19 @@
 import { ethers, toBigInt } from "ethers";
-import { rpcUrlsMap, supportedChains } from "../constants";
+import { rpcUrlsMap, supportedChains } from "../constants/constants";
 
 
 export const isSupportedChain = (chainId) =>
     supportedChains.includes(Number(chainId));
 
-export const shortenAccount = (account) =>
+export const trimString = (account) =>
     `${account.substring(0, 6)}...${account.substring(38)}`;
 
-export const getReadOnlyProvider = (chainId) => {
+export const getProvider = (chainId) => {
     return new ethers.JsonRpcProvider(rpcUrlsMap[chainId]);
 };
 
 
-// export const formatDate = (time) => {
+// export const fK = (time) => {
 //     // Convert the timestamp to milliseconds by multiplying it by 1000
 //     const date = new Date(time * 1000);
 
@@ -46,5 +46,5 @@ export const getReadOnlyProvider = (chainId) => {
 //     return formattedDate;
 // };
 
-export const calculateGasMargin = (value) =>
-    (toBigInt(value) * toBigInt(120)) / toBigInt(100);
+// export const calculateGasMargin = (value) =>
+//     (toBigInt(value) * toBigInt(120)) / toBigInt(100);

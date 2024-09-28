@@ -1,8 +1,6 @@
 import { Fragment, useMemo, useState } from "react";
 import "./App.css";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Connection from "./connection/Connection";
+import WalletConnect from "./walletconnect/WalletConnect";
 
 
 const generateRandomId = () => {
@@ -51,13 +49,12 @@ function App() {
 
   return (
     <>
-    <header>
-      {/* <button type="button">Connect</button> */}
-      <Connection />
-    </header>
-    <ToastContainer />
-
     <main>
+      <WalletConnect />
+
+    </main>
+
+    {/* <main>
       <h1>Todos</h1>
 
       <div className="fl">
@@ -94,7 +91,7 @@ function App() {
           ))
         )}
       </ul>
-    </main>
+    </main> */}
     </>
   );
 }
